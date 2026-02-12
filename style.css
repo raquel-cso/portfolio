@@ -735,10 +735,19 @@ input:focus, textarea:focus{
    Iframes fixos: 1080x720
    ========================= */
 
+/* =========================
+   Power BI Embeds (16:9)
+   Responsivo, até 1920x1080
+   ========================= */
+
 .pbi-frame-wrap{
   width: 100%;
-  overflow-x: auto;            /* mobile: permite ver 1080px inteiro */
-  overflow-y: hidden;
+  max-width: 1920px;          /* “tamanho alvo” */
+  margin-inline: auto;
+
+  aspect-ratio: 16 / 9;       /* mantém proporção 16:9 */
+  overflow: hidden;           /* sem scroll, sem vazar borda */
+
   border-radius: 16px;
   border: 1px solid rgba(176,108,255,.14);
   background: rgba(10,10,16,.35);
@@ -759,10 +768,14 @@ input:focus, textarea:focus{
     radial-gradient(60% 60% at 80% 30%, rgba(124,44,255,.14), transparent 60%);
 }
 
+/* iframe preenche o wrapper 16:9 */
 .pbi-iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: block;
-  width: 1080px;  /* FIXO */
-  height: 720px;  /* FIXO */
+
   border: 0;
   border-radius: 16px;
 }
