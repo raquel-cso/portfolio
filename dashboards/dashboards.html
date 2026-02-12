@@ -1,0 +1,125 @@
+<!-- dashboards/dashboards.html -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Relatório Power BI — Raquel Oliveira." />
+  <title>Relatório Power BI — Raquel Oliveira</title>
+
+  <!-- Google Fonts (mesmas do site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS ÚNICO NA ROOT -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="../index.html#inicio" aria-label="Voltar ao início do portfólio">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Raquel <span class="accent">Oliveira</span></span>
+      </a>
+
+      <div class="nav__links" role="list">
+        <a role="listitem" href="../index.html#inicio">Início</a>
+        <a role="listitem" href="../index.html#projetos">Projetos</a>
+        <a role="listitem" href="../index.html#contato">Contato</a>
+      </div>
+
+      <a class="btn btn--small btn--ghost" href="../index.html#projetos">Voltar</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="section">
+      <div class="container">
+        <!-- TÍTULO DO RELATÓRIO (em cima) -->
+        <header class="section__head">
+          <h1 class="section__title">Relatório: Visão 360° de Vendas</h1>
+          <p class="section__desc">
+            Painel executivo com KPIs, metas, variações e leitura por canal/produto. Iframe fixo em <strong>1080×720</strong>.
+          </p>
+        </header>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+
+        <!-- IFRAME ÚNICO -->
+        <div class="pbi-frame-wrap" aria-label="Relatório Power BI incorporado">
+          <iframe
+            class="pbi-iframe"
+            title="Power BI — Visão 360° de Vendas"
+            width="1080"
+            height="720"
+            src="https://app.powerbi.com/view?r=PLACEHOLDER_RELATORIO"
+            frameborder="0"
+            allowfullscreen="true">
+          </iframe>
+        </div>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+
+        <!-- BOXES ABAIXO (2) -->
+        <div class="grid grid--2" aria-label="Detalhes do relatório e dos dados">
+          <!-- Box 1: sobre o relatório -->
+          <article class="card card--glass">
+            <h2 class="card__title">Sobre este relatório</h2>
+            <p class="card__text">
+              Este painel foi desenhado para apoiar decisões rápidas: ele destaca o que mudou no período,
+              onde estão os principais ganhos/perdas e quais alavancas podem ser acionadas.
+              A navegação é orientada por perguntas (o quê, onde, por quê) com filtros claros e KPIs no topo.
+            </p>
+
+            <div class="tags" aria-label="Principais recursos">
+              <span class="tag">KPIs & Metas</span>
+              <span class="tag">Análise por Canal</span>
+              <span class="tag">Top Produtos</span>
+              <span class="tag">Variação vs Período</span>
+            </div>
+
+            <p class="muted small">
+              Observação: links e dados são exemplos/placeholder — substitua pelo embed real do Power BI.
+            </p>
+          </article>
+
+          <!-- Box 2: dados, origem, tratamento -->
+          <article class="card card--glass">
+            <h2 class="card__title">Dados, origem e tratamento</h2>
+            <p class="card__text">
+              A base combina fontes operacionais (vendas/faturamento) com dimensões de produto e clientes.
+              O tratamento prioriza consistência e rastreabilidade: padronização de chaves, validações e
+              regras de negócio documentadas antes da camada de BI.
+            </p>
+
+            <ul class="checklist" aria-label="Pipeline resumido">
+              <li><strong>Origem:</strong> ERP (vendas), CRM (clientes) e planilhas de metas (exemplo).</li>
+              <li><strong>Tratamento:</strong> limpeza de nulos, normalização de categorias, deduplicação e regras de calendário.</li>
+              <li><strong>Modelagem:</strong> dimensões (Produto/Cliente/Canal/Calendário) + fato de vendas (star schema).</li>
+              <li><strong>Qualidade:</strong> checagens de consistência (totais, chaves, faixas), logs e versionamento.</li>
+            </ul>
+
+            <div class="tags" aria-label="Stack">
+              <span class="tag">SQL</span>
+              <span class="tag">ETL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Data Quality</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span class="accent">Raquel Oliveira</span> — Relatório Power BI.</p>
+      <p class="muted">Clareza, consistência e foco em decisão.</p>
+    </div>
+  </footer>
+</body>
+</html>
