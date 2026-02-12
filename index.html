@@ -1,0 +1,547 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio de Raquel Oliveira — Analista de Dados. Projetos, habilidades, experiência e contato." />
+  <title>Raquel Oliveira — Analista de Dados</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="inicio">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Raquel <span class="accent">Oliveira</span></span>
+      </a>
+
+      <div class="nav__links" role="list">
+        <a role="listitem" href="#inicio">Início</a>
+        <a role="listitem" href="#sobre">Sobre</a>
+        <a role="listitem" href="#skills">Skills</a>
+        <a role="listitem" href="#projetos">Projetos</a>
+        <a role="listitem" href="#experiencia">Experiência</a>
+        <a role="listitem" href="#contato">Contato</a>
+      </div>
+
+      <a class="btn btn--small btn--ghost" href="#contato">Falar comigo</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          Portfólio · Dados · BI · Automação
+        </p>
+
+        <h1 class="hero__title">
+          Raquel Oliveira <span class="accent">—</span> Analista de Dados
+        </h1>
+
+        <p class="hero__subtitle">
+          Transformo dados em decisões: organizo, analiso e comunico insights com clareza — do SQL ao dashboard,
+          sempre com foco em impacto no negócio.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#projetos">Ver Projetos</a>
+          <a class="btn btn--secondary" href="assets/Raquel_Oliveira_CV.pdf" target="_blank" rel="noopener">
+            Baixar CV
+          </a>
+        </div>
+
+        <div class="hero__highlights" aria-label="Destaques rápidos">
+          <div class="pill">
+            <span class="pill__label">Foco</span>
+            <span class="pill__value">Insights acionáveis</span>
+          </div>
+          <div class="pill">
+            <span class="pill__label">Stack</span>
+            <span class="pill__value">SQL · Python · Power BI</span>
+          </div>
+          <div class="pill">
+            <span class="pill__label">Entrega</span>
+            <span class="pill__value">Dashboards + Automação</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALLOUT: O QUE EU ENTREGO -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">O que eu entrego</h2>
+          <p class="section__desc">
+            Uma abordagem prática: do dado bruto até a história final — com consistência, documentação e estética.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card card--glow">
+            <div class="card__icon" aria-hidden="true">
+              <!-- sparkle -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2l1.2 4.6L18 8l-4.8 1.4L12 14l-1.2-4.6L6 8l4.8-1.4L12 2Z" stroke="currentColor" stroke-width="1.8" />
+                <path d="M19 13l.8 2.7L22 16l-2.2.3L19 19l-.8-2.7L16 16l2.2-.3L19 13Z" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </div>
+            <h3 class="card__title">Insights</h3>
+            <p class="card__text">
+              Análise exploratória, métricas bem definidas e recomendações objetivas para apoiar decisões estratégicas.
+            </p>
+          </article>
+
+          <article class="card card--glow">
+            <div class="card__icon" aria-hidden="true">
+              <!-- automation -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M8 7h8M8 12h5M8 17h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v13A2.5 2.5 0 0 1 17.5 21h-11A2.5 2.5 0 0 1 4 18.5v-13Z" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Automação</h3>
+            <p class="card__text">
+              Redução de retrabalho com rotinas de ETL, padronização de relatórios e pipelines confiáveis.
+            </p>
+          </article>
+
+          <article class="card card--glow">
+            <div class="card__icon" aria-hidden="true">
+              <!-- chart -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M4 19h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M7 15l3-3 3 2 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Visualização</h3>
+            <p class="card__text">
+              Dashboards e narrativas em BI com hierarquia visual, acessibilidade e foco no que importa.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container split">
+        <div>
+          <div class="section__head section__head--tight">
+            <h2 class="section__title">Sobre</h2>
+            <p class="section__desc">
+              Sou Analista de Dados com experiência em operações e administração, e um foco claro em transformar
+              informações dispersas em análises consistentes — com SQL, Python e ferramentas de BI.
+            </p>
+          </div>
+
+          <p class="body-text">
+            No dia a dia, eu gosto de trabalhar com perguntas bem definidas, dados confiáveis e uma comunicação
+            simples: o objetivo é que qualquer pessoa entenda a mensagem do dashboard em segundos.
+            Tenho cuidado com qualidade (validações, consistência), e também com a estética (layout, legibilidade e contraste).
+          </p>
+
+          <div class="badges" aria-label="Destaques">
+            <span class="badge">Proativa</span>
+            <span class="badge">Orientada a métricas</span>
+            <span class="badge">Detalhista</span>
+            <span class="badge">Storytelling</span>
+          </div>
+        </div>
+
+        <aside class="card card--glass summary" aria-label="Resumo rápido">
+          <h3 class="card__title">Resumo rápido</h3>
+          <ul class="summary__list">
+            <li>
+              <span class="summary__k">Localização</span>
+              <span class="summary__v">Campinas/SP (placeholder)</span>
+            </li>
+            <li>
+              <span class="summary__k">E-mail</span>
+              <span class="summary__v">
+                <a class="link" href="mailto:raquel.oliveira@email.com">raquel.oliveira@email.com</a>
+              </span>
+            </li>
+            <li>
+              <span class="summary__k">Ferramentas</span>
+              <span class="summary__v">SQL · Python · Power BI · Excel</span>
+            </li>
+          </ul>
+
+          <div class="divider" role="separator" aria-hidden="true"></div>
+
+          <p class="muted">
+            Disponível para oportunidades de estágio/júnior em dados, BI e analytics.
+          </p>
+
+          <div class="summary__cta">
+            <a class="btn btn--primary btn--full" href="#contato">Entrar em contato</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Skills</h2>
+          <p class="section__desc">
+            Habilidades técnicas e de comunicação para fechar o ciclo: preparação → análise → visualização → decisão.
+          </p>
+        </div>
+
+        <div class="skills">
+          <div class="skills__chips" aria-label="Lista de habilidades">
+            <span class="chip">SQL</span>
+            <span class="chip">Python (Pandas/NumPy)</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">Excel</span>
+            <span class="chip">Estatística</span>
+            <span class="chip">ETL</span>
+            <span class="chip">Storytelling</span>
+            <span class="chip">Data Cleaning</span>
+          </div>
+
+          <div class="grid grid--2" aria-label="Proficiência (estimativa)">
+            <article class="card card--glass">
+              <h3 class="card__title">Proficiência</h3>
+
+              <div class="meter">
+                <div class="meter__row">
+                  <span>SQL</span>
+                  <span class="meter__tag">Avançado</span>
+                </div>
+                <div class="bar" role="presentation"><span style="width: 88%"></span></div>
+
+                <div class="meter__row">
+                  <span>Power BI</span>
+                  <span class="meter__tag">Intermediário</span>
+                </div>
+                <div class="bar" role="presentation"><span style="width: 78%"></span></div>
+
+                <div class="meter__row">
+                  <span>Python (Pandas)</span>
+                  <span class="meter__tag">Intermediário</span>
+                </div>
+                <div class="bar" role="presentation"><span style="width: 72%"></span></div>
+
+                <div class="meter__row">
+                  <span>Tableau</span>
+                  <span class="meter__tag">Intermediário</span>
+                </div>
+                <div class="bar" role="presentation"><span style="width: 66%"></span></div>
+
+                <div class="meter__row">
+                  <span>ETL & Qualidade</span>
+                  <span class="meter__tag">Intermediário</span>
+                </div>
+                <div class="bar" role="presentation"><span style="width: 70%"></span></div>
+              </div>
+
+              <p class="muted small">
+                *Níveis estimados para orientar conversas; projetos e resultados mostram melhor o domínio.
+              </p>
+            </article>
+
+            <article class="card card--glass">
+              <h3 class="card__title">Como eu trabalho</h3>
+              <ul class="checklist">
+                <li>Definição de métricas e perguntas do negócio</li>
+                <li>Limpeza, padronização e validações de dados</li>
+                <li>Análise exploratória + hipóteses</li>
+                <li>Dashboards com hierarquia visual e contexto</li>
+                <li>Documentação e handoff para o time</li>
+              </ul>
+
+              <div class="divider" role="separator" aria-hidden="true"></div>
+
+              <p class="muted">
+                Preferência por soluções simples, rastreáveis e fáceis de manter.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Projetos</h2>
+          <p class="section__desc">
+            Seleção de trabalhos que demonstram análise, visualização e automação (links de exemplo).
+          </p>
+        </div>
+
+        <div class="grid grid--projects" aria-label="Lista de projetos">
+          <article class="project card card--glass">
+            <div class="project__top">
+              <h3 class="project__title">Dashboard de Vendas</h3>
+              <p class="project__desc">
+                Painel executivo com KPIs, funil, análise por canal e alertas para variações relevantes.
+              </p>
+            </div>
+            <div class="tags" aria-label="Stack do projeto">
+              <span class="tag">Power BI</span>
+              <span class="tag">SQL</span>
+              <span class="tag">DAX</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--ghost btn--small" href="https://github.com/raquel-oliveira/dashboard-vendas" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--primary btn--small" href="https://raquel-oliveira.dev/demo-vendas" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <div class="project__top">
+              <h3 class="project__title">Análise de Churn</h3>
+              <p class="project__desc">
+                Identificação de padrões de cancelamento, coortes e drivers com recomendações priorizadas.
+              </p>
+            </div>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Estatística</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--ghost btn--small" href="https://github.com/raquel-oliveira/churn-analysis" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--primary btn--small" href="https://raquel-oliveira.dev/demo-churn" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <div class="project__top">
+              <h3 class="project__title">Previsão de Demanda</h3>
+              <p class="project__desc">
+                Modelo base para previsão mensal com backtesting, monitoramento de erro e relatório final.
+              </p>
+            </div>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Time Series</span>
+              <span class="tag">ETL</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--ghost btn--small" href="https://github.com/raquel-oliveira/previsao-demanda" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--primary btn--small" href="https://raquel-oliveira.dev/demo-demanda" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <div class="project__top">
+              <h3 class="project__title">Segmentação de Clientes</h3>
+              <p class="project__desc">
+                Clusterização para perfis de consumo e ações de retenção com leitura simples para o negócio.
+              </p>
+            </div>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Modelagem</span>
+              <span class="tag">Storytelling</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--ghost btn--small" href="https://github.com/raquel-oliveira/segmentacao-clientes" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--primary btn--small" href="https://raquel-oliveira.dev/demo-segmentacao" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <div class="project__top">
+              <h3 class="project__title">Automação de Relatórios</h3>
+              <p class="project__desc">
+                Pipeline para extrair, tratar e publicar relatórios com templates padronizados e logs de execução.
+              </p>
+            </div>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">ETL</span>
+              <span class="tag">Excel</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--ghost btn--small" href="https://github.com/raquel-oliveira/automacao-relatorios" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--primary btn--small" href="https://raquel-oliveira.dev/demo-automacao" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <div class="project__top">
+              <h3 class="project__title">Data Quality Checks</h3>
+              <p class="project__desc">
+                Conjunto de validações (completude, unicidade, consistência) para reduzir erros antes do BI.
+              </p>
+            </div>
+            <div class="tags">
+              <span class="tag">SQL</span>
+              <span class="tag">Data Cleaning</span>
+              <span class="tag">Governança</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--ghost btn--small" href="https://github.com/raquel-oliveira/data-quality" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--primary btn--small" href="https://raquel-oliveira.dev/demo-quality" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Experiência & Educação</h2>
+          <p class="section__desc">
+            Trajetória com base em operações e evolução para dados — foco em disciplina, melhoria contínua e clareza.
+          </p>
+        </div>
+
+        <div class="timeline" aria-label="Linha do tempo">
+          <article class="t-item card card--glass">
+            <div class="t-item__meta">
+              <span class="t-item__when">2024 — Atual</span>
+              <span class="t-item__where">Grupo Carrefour Brasil</span>
+            </div>
+            <h3 class="t-item__title">Operadora de Checkout Jr.</h3>
+            <ul class="t-item__list">
+              <li>Organização e conferência de informações operacionais, garantindo consistência no atendimento.</li>
+              <li>Rotina com foco em qualidade, agilidade e resolução de problemas em tempo real.</li>
+              <li>Interesse contínuo em melhoria de processos e padronização (checklists e controles).</li>
+            </ul>
+          </article>
+
+          <article class="t-item card card--glass">
+            <div class="t-item__meta">
+              <span class="t-item__when">2023 — 2024</span>
+              <span class="t-item__where">Onlog Express</span>
+            </div>
+            <h3 class="t-item__title">Estagiária Administrativa</h3>
+            <ul class="t-item__list">
+              <li>Apoio a rotinas administrativas e controles em planilhas com organização e atenção a detalhes.</li>
+              <li>Consolidação de informações para relatórios internos e suporte a demandas do time.</li>
+              <li>Primeiros contatos com análise de dados e estruturação de indicadores operacionais.</li>
+            </ul>
+          </article>
+
+          <article class="t-item card card--glass">
+            <div class="t-item__meta">
+              <span class="t-item__when">2022 — Em andamento</span>
+              <span class="t-item__where">Graduação</span>
+            </div>
+            <h3 class="t-item__title">Análise e Desenvolvimento de Sistemas (ADS)</h3>
+            <ul class="t-item__list">
+              <li>Base em lógica, modelagem e construção de soluções com foco em dados e sistemas.</li>
+              <li>Projetos acadêmicos voltados para BI, ETL e automação com Python e SQL.</li>
+              <li>Objetivo: atuar com Analytics/BI, ampliando repertório em dados e produto.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato">
+      <div class="container split split--reverse">
+        <div>
+          <div class="section__head section__head--tight">
+            <h2 class="section__title">Contato</h2>
+            <p class="section__desc">
+              Quer conversar sobre uma vaga, freelas ou um projeto de BI? Me mande uma mensagem — respondo o quanto antes.
+            </p>
+          </div>
+
+          <div class="socials" aria-label="Links sociais">
+            <a class="social" href="https://github.com/raquel-oliveira" target="_blank" rel="noopener" aria-label="GitHub da Raquel">
+              <span class="social__icon" aria-hidden="true">
+                <!-- GitHub -->
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+                  <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.2-1.4-1.2-1.4-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6-.8 1.6-.8.1-.7.4-1.1.7-1.3-2.3-.3-4.8-1.2-4.8-5.3 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 .1a10.4 10.4 0 0 1 5.4 0c2.1-.4 3-.1 3-.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.8 1.1 3 0 4.1-2.5 5-4.9 5.3.4.3.7 1 .7 2.1v3.1c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>github.com/raquel-oliveira</span>
+            </a>
+
+            <a class="social" href="https://www.linkedin.com/in/raquel-oliveira" target="_blank" rel="noopener" aria-label="LinkedIn da Raquel">
+              <span class="social__icon" aria-hidden="true">
+                <!-- LinkedIn -->
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+                  <path d="M6.5 9.5V18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M6.5 6.8a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6Z" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M10.2 18v-5.1c0-1.6 1-2.6 2.4-2.6 1.3 0 2.1.9 2.1 2.6V18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1Z" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </span>
+              <span>linkedin.com/in/raquel-oliveira</span>
+            </a>
+
+            <a class="social" href="mailto:raquel.oliveira@email.com" aria-label="Enviar e-mail">
+              <span class="social__icon" aria-hidden="true">
+                <!-- Mail -->
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+                  <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M5.5 7l6.5 5 6.5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>raquel.oliveira@email.com</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="card card--glass form-card" aria-label="Formulário de contato (visual)">
+          <h3 class="card__title">Envie uma mensagem</h3>
+
+          <form class="form" action="#" method="post">
+            <div class="field">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" />
+            </div>
+
+            <div class="field">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte um pouco sobre o que você precisa..."></textarea>
+            </div>
+
+            <button class="btn btn--primary btn--full" type="submit" aria-label="Enviar (apenas visual)">
+              Enviar mensagem
+            </button>
+
+            <p class="muted small">
+              *Este formulário é apenas visual (sem JavaScript). Para contato direto, use o e-mail acima.
+            </p>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span class="accent">Raquel Oliveira</span> — Todos os direitos reservados.</p>
+      <p class="muted">Feito com foco em clareza, consistência e impacto.</p>
+    </div>
+  </footer>
+</body>
+</html>
