@@ -745,7 +745,7 @@ input:focus, textarea:focus{
   max-width: 1920px;          /* “tamanho alvo” */
   margin-inline: auto;
 
-  aspect-ratio: 16 / 9;       /* mantém proporção 16:9 */
+  aspect-ratio: 16 / 10;       /* mantém proporção 16:9 */
   overflow: hidden;           /* sem scroll, sem vazar borda */
 
   border-radius: 16px;
@@ -793,4 +793,25 @@ input:focus, textarea:focus{
 }
 .pbi-frame-wrap::-webkit-scrollbar-thumb:hover{
   background: rgba(176,108,255,.30);
+}
+
+/* README / Artigo */
+.readme{
+  padding: 22px;
+}
+.readme__head{
+  margin-bottom: 10px;
+}
+.readme__content{
+  color: rgba(245,244,255,.84);
+  max-width: 92ch;
+}
+.readme__h3{
+  margin: 18px 0 10px;
+  font-family: "Space Grotesk", Inter, system-ui;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+.readme__p{
+  margin: 0 0 14px;
 }

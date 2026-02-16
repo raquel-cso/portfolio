@@ -1,0 +1,271 @@
+<!-- dashboards/dashboards.html -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Relatório Power BI — Raquel Oliveira." />
+  <title>Observatório de Compras Públicas de Saúde — Raquel Oliveira</title>
+
+  <!-- Google Fonts (mesmas do site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS ÚNICO NA ROOT -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="../index.html#inicio" aria-label="Voltar ao início do portfólio">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Raquel <span class="accent">Oliveira</span></span>
+      </a>
+
+      <div class="nav__links" role="list">
+        <a role="listitem" href="../index.html#inicio">Início</a>
+        <a role="listitem" href="../index.html#projetos">Projetos</a>
+        <a role="listitem" href="../index.html#contato">Contato</a>
+      </div>
+
+      <a class="btn btn--small btn--ghost" href="../index.html#projetos">Voltar</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="section">
+      <div class="container">
+        <!-- TÍTULO DO RELATÓRIO (em cima) -->
+        <header class="section__head">
+          <h1 class="section__title">Observatório de Compras Públicas de Saúde</h1>
+          <p class="section__desc">
+            Painel executivo com indicadores de compras públicas no setor saúde, com recortes por UF, item e período.
+          </p>
+        </header>
+
+        <!-- IFRAME ÚNICO -->
+        <div class="pbi-frame-wrap" aria-label="Relatório Power BI incorporado">
+          <iframe
+            class="pbi-iframe"
+            title="Observatório de Compras Públicas de Saúde"
+            src="https://app.powerbi.com/view?r=eyJrIjoiOTJkMDUyOTUtY2E4Yy00M2M4LWFjMTctN2UxYjI1NzY2OWU3IiwidCI6ImE0OWE3MzI2LWNkMDUtNDdhNC1iMWM3LTY4MmNhNzQ4ZDg5ZCJ9"
+            frameborder="0"
+            allowfullscreen="true">
+          </iframe>
+        </div>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+
+        <!-- BOXES ABAIXO (2) -->
+        <div class="grid grid--2" aria-label="Detalhes do relatório e dos dados">
+          <!-- Box 1: sobre o relatório -->
+          <article class="card card--glass">
+            <h2 class="card__title">Sobre este relatório</h2>
+            <p class="card__text">
+              Este painel consolida as compras públicas de medicamentos a partir do Banco de Preços em Saúde (BPS), já modelado em star-schema no BigQuery e consumido no Power BI.<br><br>
+              Ele foi desenhado para dar leitura rápida de tendência, concentração e dispersão de preços: o que está crescendo ou caindo no período, quais UFs e instituições concentram o gasto, e quais itens/categorias (CATMAT) explicam as principais variações.<br><br>
+              A navegação segue um fluxo simples de análise — o quê, onde, quando e por quanto — com KPIs no topo, comparativos (ex.: últimos 12 meses vs. período anterior) e filtros objetivos para recortar por UF, instituição, item/categoria e modalidade/tipo de compra.
+            </p>
+
+            <div class="tags" aria-label="Principais recursos">
+              <span class="tag">Gasto Total</span>
+              <span class="tag">Preço Médio</span>
+              <span class="tag">Recorte por UF</span>
+              <span class="tag">Top Itens</span>
+            </div>
+
+          </article>
+
+          <!-- Box 2: dados, origem, tratamento -->
+          <article class="card card--glass">
+            <h2 class="card__title">Dados, origem e tratamento</h2>
+            <p class="card__text">
+              Este relatório utiliza exclusivamente dados públicos do Banco de Preços em Saúde (BPS), do Ministério da Saúde, estruturados em um pipeline em nuvem e publicados no BigQuery para consumo no Power BI. O tratamento foi pensado para garantir consistência, rastreabilidade e comparabilidade: cada etapa mantém metadados de ingestão (ano de origem, data de carga e referência do arquivo) e aplica padronizações antes da camada de BI.
+            </p>
+
+            <br>
+
+            <ul class="checklist" aria-label="Pipeline resumido">
+              <li><strong>Origem:</strong> BPS (downloads anuais em arquivos públicos), com campos de instituição, fornecedor/fabricante, item (CATMAT), quantidades e preços.</li>
+              <li><strong>Tratamento:</strong> validação e limpeza de nulos críticos, padronização de UF e identificadores, normalização de textos (descrições e nomes), tipagem de datas e numéricos e deduplicação quando aplicável.</li>
+              <li><strong>Modelagem:</strong> star schema com fato de compras (volume e valor) e dimensões (Instituição/UF/Município, Produto/CATMAT, Fornecedor, Fabricante, Modalidade/Tipo e Calendário) para análises consistentes ao longo do tempo e por região.</li>
+              <li><strong>Qualidade:</strong> checagens de integridade de chaves (FKs), consistência de totais (valor = quantidade × preço unitário quando aplicável), faixas plausíveis de preço, além de detecção de outliers para apoiar revisões e evitar leituras distorcidas.</li>
+            </ul>
+
+            <div class="tags" aria-label="Stack">
+              <span class="tag">SQL</span>
+              <span class="tag">ETL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Google Cloud Platform (GCP)</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+
+        <!-- BOX MAIOR (README / ARTIGO) -->
+        <article class="card card--glow readme" aria-label="README do projeto">
+          <header class="readme__head">
+            <h2 class="card__title">README — Observatório de Compras Públicas de Saúde</h2>
+            <p class="muted">
+              Este repositório é um data product que desenvolvi utilizando dados 100% públicos para apoiar análises de compras públicas na saúde, com foco inicial no Banco de Preços em Saúde (BPS).</p>
+
+            <p class="muted">Projetei este trabalho para ser replicável, construindo toda a infraestrutura em Google Cloud Platform (GCP), com orquestração via GitHub Actions, armazenamento em Data Lake e publicação de tabelas analíticas no BigQuery, consumidas no Power BI.</p>
+            </p>
+          </header>
+
+          <div class="readme__content">
+            <h3 class="readme__h3">1) Objetivo</h3>
+            <p class="readme__p">
+              O objetivo do <strong>Observatório de Compras Públicas de Saúde</strong> é facilitar a leitura de padrões de compra, variação de preços e concentração de gasto em itens e regiões, oferecendo uma navegação “executiva” (rápida) mas com profundidade suficiente para investigação (drill-down).
+              <br>
+              Com os dados do BPS processados, o projeto responde a perguntas como:
+              <ul>
+                <li>Quais itens/categorias concentram o gasto e o volume?</li>
+                <li>Como o preço médio e a dispersão (p25/p75) variam por UF/instituição?</li>
+                <li>Quais são os principais outliers e onde estão ocorrendo?</li>
+                <li>Quais variações no tempo sugerem mudança de comportamento (sazonalidade/quebras)?</li>
+              </ul>
+            </p>
+
+            <h3 class="readme__h3">2) Ambiente e arquitetura (O que implementei)</h3>
+              <h4 class="readme__h4">2.1 GCP: ambiente pessoal com padrão corporativo</h4>
+                <p class="readme__p">
+                  Criei um projeto dedicado no GCP para isolar custos, permissões e recursos do meu laboratório. Meu objetivo foi simular um ambiente real de dados, aplicando boas práticas de governança mesmo em um setup individual.<br>
+                  Principais componentes utilizados:
+                </p>
+                <ul class="checklist">
+                  <li><strong>Cloud Storage (GCS):</strong> Atuando como Data Lake.</li>
+                  <li><strong>BigQuery:</strong> Como camada analítica e Data Warehouse.</li>
+                  <li><strong>IAM:</strong> Para controle de acesso seguro (incluindo uso de service accounts para automações).</li>
+                </ul>
+
+                <h4 class="readme__h4">2.2 Orquestração: GitHub Actions</h4>
+                <p class="readme__p">
+                  Para a orquestração do pipeline, optei pelo GitHub Actions, utilizando autenticação segura via OIDC (Workload Identity Federation), eliminando a necessidade de salvar chaves JSON no repositório.<br>
+                  Configurei o workflow para executar o pipeline em etapas sequenciais, garantindo a integridade dos dados:
+                </p>
+                <ol class="checklist">
+                  <li><strong>Landing:</strong> Download dos dados e Armazenamento dos arquivos .zip originais.</li>
+                  <li><strong>Raw:</strong> Extração dos .zip e Armazenamento das tabelas em formato CSV.</li>
+                  <li><strong>Staging:</strong> Conversão e otimização para .parquet.</li>
+                  <li><strong>Bronze:</strong> External Table referenciando os dados em parquet no GCS.</li>
+                  <li><strong>Silver:</strong> Modelagem em star-schema no BigQuery.</li>
+                  <li><strong>Gold:</strong> Publicação final para consumo.</li>
+                </ol>
+
+                <p class="readme__p">
+                  Essa escolha técnica automatiza a execução (manual ou agendada), versiona o pipeline junto ao código e aproxima o projeto de práticas reais de CI/CD de dados, mantendo baixo custo e simplicidade.
+                </p>
+
+            <h3 class="readme__h3">3) Data Lake com bucket único</h3>
+            <p class="readme__p">
+              Utilizei um único bucket no Cloud Storage, organizando o Data Lake através de prefixos/pastas lógicas:
+            </p>
+            <ul class="checklist">
+              <li><strong>landing/bps/</strong> — arquivos originais (.zip) baixados do BPS.</li>
+              <li><strong>raw/bps/</strong> — arquivos extraídos em formato CSV, organizados por ano.</li>
+              <li><strong>stg/bps/</strong> — arquivos convertidos para Parquet, otimizados para consulta.</li>
+            </ul>
+
+            <p class="readme_p"><strong>Por que escolhi essa estrutura?</strong></p>
+            <p class="readme__p">
+              Embora em ambientes corporativos grandes seja comum separar por buckets distintos (raw/stg/prod), priorizei a simplicidade sem perder a organização. O uso de prefixos simplifica o gerenciamento de permissões (IAM) e a automação, mantendo a estrutura limpa e consistente para o escopo deste projeto.
+            </p>
+
+            <h3 class="readme__h3">4) Arquitetura Medalhão</h3>
+            <p class="readme__p">
+              Implementei o padrão <em>Medallion Architecture</em> adaptado ao ecossistema GCP:
+            </p>
+            
+            <h4 class="readme__h4">Bronze (Entrada e Rastreabilidade)</h4>
+            <p class="readme__p">
+              A entrada real reside no Data Lake. No BigQuery, a camada Bronze foca na rastreabilidade, mantendo metadados como <code>source_year</code>, <code>ingest_date</code> e <code>load_ts_utc</code>.
+            </p>
+
+            <h4 class="readme__h4">Silver (Camada Analítica Confiável)</h4>
+            <p class="readme__p">
+              Nesta etapa, consolido os dados em um modelo tipado e validado. Modelei a camada Silver já em <strong>star-schema</strong>, tornando-a robusta o suficiente para ser utilizada diretamente em ferramentas de BI.
+            </p>
+
+            <h4 class="readme__h4">Gold (Camada Final de Consumo)</h4>
+            <p class="readme__p">
+              A camada Gold (<code>bps.*</code>) é a versão publicada. Realizei a promoção removendo colunas técnicas (ex: <code>nk_</code>), mantendo apenas chaves finais e métricas de negócio relevantes.
+            </p>
+
+            <h3 class="readme__h3">5) Guia de Leitura do Painel</h3>
+            <p class="readme__p">Para interpretar as análises, recomendo o seguinte fluxo:</p>
+            <ol class="checklist">
+              <li><strong>KPIs Gerais:</strong> Comece pelo gasto total, quantidade, preço médio e variação.</li>
+              <li><strong>Filtros:</strong> Utilize UF e período para entender concentração e tendências.</li>
+              <li><strong>Rankings:</strong> Use a visualização de "Top Itens" para identificar a Curva de Pareto (80/20).</li>
+              <li><strong>Análise de Preço:</strong> Valide o preço médio observando a dispersão (p25/p75) e o volume.</li>
+            </ol>
+            <p class="readme__p muted">
+              <em>*Observação técnica: O preço médio pode sofrer distorções devido ao mix de apresentações ou especificações do item.</em>
+            </p>
+
+            <h3 class="readme__h3">6) Fontes de dados e Roadmap</h3>
+            
+            <h4 class="readme__h4">Implementado (MVP Atual)</h4>
+            <p class="readme__p">
+              <strong>BPS (Banco de Preços em Saúde):</strong> Dados completos de compras públicas (itens, quantidades, fornecedores, valores).
+            </p>
+
+            <h4 class="readme__h4">Próximos Passos (Expansão)</h4>
+            <ul class="checklist">
+              <li>
+                <strong>IBGE (População):</strong> Integração para permitir análises <em>per capita</em>, normalizando o volume de compras pelo tamanho da população.
+              </li>
+              <li>
+                <strong>DATASUS (SIA e SIH):</strong> Cruzamento com dados de produção ambulatorial e internações para comparar "compra" vs. "demanda assistencial".
+              </li>
+            </ul>
+
+            <h3 class="readme__h3">7) Tratamento e Qualidade</h3>
+            <p class="readme__p">No pipeline de engenharia, priorizei:</p>
+            <ul class="checklist">
+              <li>Padronização de tipos (UF, datas, numéricos).</li>
+              <li>Consistência entre medidas (valor, quantidade, preço unitário).</li>
+              <li>Rastreabilidade total da ingestão via metadados.</li>
+              <li>Regras de validação para identificar nulos críticos e outliers.</li>
+            </ul>
+
+            <h3 class="readme__h3">8) Limitações conhecidas</h3>
+            <p class="readme__p">
+              Como utilizo bases públicas, o projeto está sujeito a atrasos na disponibilização dos dados originais e inconsistências de preenchimento na ponta. Indicadores de preço dependem fortemente da especificação correta do item no momento do cadastro da compra.
+            </p>
+
+            <p class="readme__p">
+              Caso queira ter um olhar mais da parte técnica, o código do pipeline e do modelo de dados está disponível no meu github <a href="https://github.com/raquel-cso/pharma-data-lab">https://github.com/raquel-cso/pharma-data-lab</a>.
+            </p>
+
+            <div class="tags" aria-label="Tags do README">
+              <span class="tag">Google Cloud Platform (GCP)</span>
+              <span class="tag">BigQuery</span>
+              <span class="tag">GCS</span>
+              <span class="tag">Data Lake</span>
+              <span class="tag">Metodologia</span>
+              <span class="tag">ETL</span>
+              <span class="tag">Qualidade de Dados</span>
+              <span class="tag">Transparência</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span class="accent">Raquel Oliveira</span> — Relatório Power BI.</p>
+      <p class="muted">Clareza, consistência e foco em decisão.</p>
+    </div>
+  </footer>
+</body>
+</html>
