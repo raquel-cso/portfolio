@@ -79,6 +79,7 @@
     <header>
         <h1>RAQUEL OLIVEIRA</h1>
         <div class="contact-info">
+            <strong>ESTÁGIO EM DADOS</strong><br>
             Hortolândia, São Paulo, Brasil • <a href="mailto:raquel.cristinaoliveira.2001@gmail.com">raquel.cristinaoliveira.2001@gmail.com</a> • +55 (19) 99140-5402
             <br>
             <a href="https://raquel-cso.github.io/portfolio/#inicio">raquel-cso.github.io/portfolio/</a> •
@@ -86,6 +87,11 @@
             
         </div>
     </header>
+
+    <section>
+        <h2>SOBRE</h2>
+        <p>Profissional em início de carreira em Dados, com experiência prática em projetos end-to-end utilizando GCP, SQL, Python e Power BI. Busco estágio ou posição júnior para aplicar fundamentos de engenharia e análise de dados em ambiente corporativo.</p>
+    </section>
 
     <section>
         <h2>HABILIDADES</h2>
@@ -97,49 +103,46 @@
     </section>
 
     <section>
+        <h2>PROJETOS</h2>
+        <div class="project-item">
+            <strong><a href="https://raquel-cso.github.io/portfolio/dashboards/Observat%C3%B3rio%20de%20Compras%20P%C3%BAblicas%20de%20Sa%C3%BAde.html">Observatório de Compras Públicas de Saúde</a></strong>
+            <br>Desenvolvimento de um produto de dados end-to-end para análise de preços e padrões de compras governamentais (BPS), utilizando nuvem e boas práticas de engenharia de dados.
+            <ul>
+                <li><strong>Construção:</strong> Pipeline ELT automatizado no GCP com execução semanal via GitHub Actions (OIDC/WIF), com tempo médio de execução de ~9–10 minutos.</li>
+                <li><strong>Estruturação:</strong> Data Lake em GCS (landing/raw/stg) com conversão para Parquet e publicação via External Tables no BigQuery.</li>
+                <li><strong>Implementação:</strong> Implementação de arquitetura Medalhão (Bronze/Silver/Gold) com rastreabilidade por metadados (source_year, ingest_date, load_ts_utc).</li>
+                <li><strong>Modelagem:</strong> Analítica em Star Schema (1 fato + 8 dimensões) para análise temporal, regional e por fornecedor.</li>
+                <li><strong>Aplicação:</strong> Validações de qualidade (integridade de FKs, consistência valor = quantidade × preço e detecção de outliers).</li>
+                <li><strong>Integração:</strong> Power BI com atualização automática semanal, suportando análise de tendência, dispersão (p25/p75) e Curva ABC sobre ~28 mil registros.</li>
+                <li><strong>Custo:</strong> Projeto mantido dentro do free tier do GCP, com controle de custo e boas práticas de governança.</li>
+                <li><strong>Ferramentas:</strong> Python, SQL, GCP (Storage, BigQuery, IAM), Power BI, Git/GitHub.</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <section>
         <h2>LICENÇAS E CERTIFICAÇÕES</h2>
+
+        <div class="entry">
+            <div class="row">
+                <span class="title">UNIVERSITY OF CALIFORNIA, DAVIS</span>
+                <span class="date">2026</span>
+            </div>
+            
+            <div class="subtitle">Especialização em Letramento em Informação de Saúde para Análise de Dados</div>
+            <div class="details">
+            </div>
+        </div>
 
         <div class="entry">
             <div class="row">
                 <span class="title">UNIVERSITY OF COLORADO BOULDER</span>
                 <span class="date">2026</span>
             </div>
-            <div class="subtitle">Introdução à Análise de Dados para Negócios</div>
+            
+            <div class="subtitle">Especialização em Análise avançada de negócios</div>
             <div class="details">
-                <strong>Tópicos Chave:</strong> SQL, Tomada de Decisão Baseada em Dados, Acesso a Dados, Big Data, Análise de Dados, Computação em Nuvem, Governança de Dados, Business Intelligence, Estrutura Organizacional, Qualidade de Dados, Bancos de Dados Relacionais, Armazenamento de Dados.
-            </div>
-        </div>
-
-        <div class="entry">
-            <div class="row">
-                <span class="title">UNIVERSITY OF CALIFORNIA, DAVIS</span>
-                <span class="date">2026</span>
-            </div>
-            <div class="subtitle">Qualidade e Governança de Dados de Saúde</div>
-            <div class="details">
-                <strong>Tópicos Chave:</strong> Gestão de dados clínicos, Comunicação técnica, Gestão de informações em saúde, Validação de dados, Controle de mudanças, Governança de dados, Gestão de dados, Controle de qualidade de dados, Registros médicos,  Gerenciamento de metadados.
-            </div>
-        </div>
-
-        <div class="entry">
-            <div class="row">
-                <span class="title">UNIVERSITY OF CALIFORNIA, DAVIS</span>
-                <span class="date">2026</span>
-            </div>
-            <div class="subtitle">Soluções Analíticas para Problemas Comuns no Setor de Saúde</div>
-            <div class="details">
-                <strong>Tópicos Chave:</strong> Análise de Dados, Qualidade de Dados, Avaliação de Qualidade, ETL, Dicionário de Dados, Detecção de Fraude, Síntese de Dados, Análise de Risco, Integração de Dados, Informática em Saúde, Analytics, Transformação de Dados, Modelagem Preditiva, Gestão de Dados Clínicos.
-            </div>
-        </div>
-
-        <div class="entry">
-            <div class="row">
-                <span class="title">UNIVERSITY OF CALIFORNIA, DAVIS</span>
-                <span class="date">2026</span>
-            </div>
-            <div class="subtitle">Soluções Analíticas para Problemas Comuns no Setor de Saúde</div>
-            <div class="details">
-                <strong>Tópicos Chave:</strong> Análise de Dados, Qualidade de Dados, Avaliação de Qualidade, ETL, Dicionário de Dados, Detecção de Fraude, Síntese de Dados, Análise de Risco, Integração de Dados, Informática em Saúde, Analytics, Transformação de Dados, Modelagem Preditiva, Gestão de Dados Clínicos.
             </div>
         </div>
 
@@ -148,19 +151,15 @@
                 <span class="title">UNIVERSIDADE ESTADUAL DE CAMPINAS (UNICAMP)</span>
                 <span class="date">2026</span>
             </div>
-            <div class="subtitle">Conceitos Básicos de Logística e Supply Chain</div>
+            
+            <div class="subtitle">Curso em Conceitos Básicos de Logística e Supply Chain</div>
             <div class="details">
-                <strong>Tópicos Chave:</strong> Sistema de Gestão de Inventário, Gestão da Cadeia de Mantimentos, Transporte, Logística, Planeamento da Procura, Controle de Inventário, Nível de Serviço, Gestão de Transportes, Gestão de Pedidos, Medição de Desempenho, Forecasting.
             </div>
         </div>
+
     </section>
 
-    <section>
-        <h2>PROJETOS</h2>
-        <div class="project-item">
-            <strong><a href="https://raquel-cso.github.io/portfolio/dashboards/Observat%C3%B3rio%20de%20Compras%20P%C3%BAblicas%20de%20Sa%C3%BAde.html">Observatório de Compras Públicas de Saúde</a></strong> — Power BI, SQL, DAX, Python, GCP (Google Cloud Platform).
-        </div>
-    </section>
+
 
     <section>
         <h2>FORMAÇÃO ACADÊMICA</h2>
@@ -205,7 +204,7 @@
             </div>
             <p style="margin: 8px 0; text-align: justify;">Como parte da equipe de Controle de Qualidade, contribuí para a manutenção da integridade dos produtos e segurança alimentar, atuando desde o monitoramento técnico da cadeia de frio até a fiscalização direta das normas da ANVISA no ponto de venda.</p>
             <ul>
-                <li><strong>Gestão de Indicadores de Qualidade:</strong> Monitoramento técnico e análise de dados da cadeia de frio, garantindo a integridade de produtos sensíveis através do controle rigoroso de variáveis de armazenamento.</li>
+                <li><strong>Gestão de Indicadores de Qualidade:</strong> Monitoramento técnico e análise da cadeia de frio, garantindo a integridade de produtos sensíveis através do controle rigoroso de variáveis de armazenamento.</li>
                 <li><strong>Compliance e Auditoria Operacional:</strong> Fiscalização e garantia de conformidade com as normas da ANVISA, atuando na padronização de processos para assegurar a segurança alimentar no ponto de venda.</li>
                 <li><strong>Otimização de Inventário (FEFO):</strong> Gestão estratégica de lotes utilizando a metodologia First Expired, First Out, focada na redução de perdas e mitigação de riscos financeiros operacionais.</li>
             </ul>
